@@ -1,0 +1,316 @@
+@import "styles/fonts.scss";
+@import "styles/theme.scss";
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    line-height: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none;
+}
+
+:-moz-focusring {
+    outline: auto;
+}
+
+:-moz-ui-invalid {
+    box-shadow: none;
+}
+
+ol,
+ul,
+menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    opacity: 1;
+    color: #9ca3af;
+}
+
+input::placeholder,
+textarea::placeholder {
+    opacity: 1;
+    color: #9ca3af;
+}
+
+button,
+[role="button"] {
+    border-width: 1px;
+    cursor: pointer;
+}
+
+:disabled {
+    cursor: default;
+}
+
+html, body, #root, .main {
+    min-height: 100vh;
+}
+
+body {
+    font-family: NunitoSans, sans-serif;
+    font-size: 14px;
+    height: 100%;
+}
+
+h2, h3 {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+a {
+    text-decoration: none;
+}
+
+.react-select-container {
+    margin: 40px 16px 32px;
+    width: 200px;
+}
+
+.react-select-container .react-select {
+    &__indicator-separator {
+        display: none;
+    }
+
+    &__value-container,
+    &__input-container {
+        padding: 0;
+    }
+
+    &__single-value,
+    &__input-container,
+    &__menu {
+        margin: 0;
+    }
+
+    &__value-container {
+        padding-left: 24px;
+    }
+
+    &__input-container .react-select__input {
+        box-shadow: none;
+    }
+
+    &__indicator {
+        & {
+            padding-right: 15px;
+        }
+
+        svg {
+            height: 14px;
+            width: 14px;
+        }
+    }
+
+    &__menu {
+        border-radius: 5px;
+        box-shadow: 0 0 0 1px rgba(133, 133, 133, 0.1),0 4px 11px rgba(133, 133, 133, 0.1);
+        overflow: hidden;
+    }
+
+    &__option {
+        font-size: 12px;
+        padding: 8px 24px;
+    }
+}
+
+input,
+.react-select-container .react-select__control {
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 12px;
+    height: 48px;
+}
+
+.loading {
+    margin: 20px 16px;
+}
+
+.light {
+    &, a, .line {
+        color: $light-text;
+    }
+
+    .react-select-container .react-select__placeholder,
+    .react-select-container .react-select__option,
+    .line label {
+        color: $light-icons;
+    }
+
+    [class*="item"] {
+        background: $light-elements;
+    }
+
+    [class*="list"] {
+        background: $light-background;
+    }
+
+    .themeButton .icon {
+        background: $light-icons;
+    }
+
+    .searchIcon {
+        background: $light-input;
+    }
+
+    .react-select-container .react-select__indicator svg {
+         fill: $light-icons;
+    }
+
+    .button {
+        box-shadow: rgba(99, 99, 99, 0.3) 0 2px 8px 0;
+    }
+
+    [class*="item"],
+    [class*="flag"] {
+        box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+    }
+
+    input,
+    .react-select__control {
+        & {
+            box-shadow: 0 0 6px 0 rgba(133, 133, 133, 0.3);
+            border: 1px solid $light-background;
+            color: $light-input;
+        }
+
+        &::placeholder {
+            color: $light-placeholder;
+        }
+    }
+}
+
+.dark {
+    &,
+    a,
+    button,
+    .line,
+    .line label,
+    .react-select-container .react-select__placeholder,
+    .react-select-container .react-select__single-value,
+    .react-select-container .react-select__option {
+        color: $dark-text;
+    }
+
+    header,
+    .react-select-container .react-select__option,
+    [class*="item"] {
+        background: $dark-input;
+    }
+
+    &.main,
+    [class*="list"] {
+        background: $dark-background;
+    }
+
+    .searchIcon,
+    .themeButton .icon {
+        background: $dark-text;
+    }
+
+    .react-select-container .react-select__indicator svg {
+        fill: $dark-text;
+    }
+
+    .button {
+        background: $dark-input;
+        box-shadow: 0 4px 4px 0 rgba(31, 31, 31, 0.3);
+    }
+
+    [class*="item"],
+    [class*="flag"] {
+        box-shadow: 0 4px 4px 0 rgba(31, 31, 31, 0.1);
+    }
+
+    .react-select__control,
+    input {
+        & {
+            background: $dark-input;
+            box-shadow: none;
+            border: 1px solid $dark-input;
+            color: $dark-text;
+        }
+
+        &::placeholder {
+            color: $dark-placeholder;
+        }
+    }
+}
+
+@media only screen and (min-width: $tablet) {
+    .react-select-container {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .loading {
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+}
+
+@media only screen and (min-width: $smallDesktop) {
+    .react-select-container {
+        fill: $dark-text;
+        margin-top: 0;
+    }
+
+    .loading {
+        margin-right: 60px;
+        margin-left: 60px;
+    }
+
+    input,
+    .react-select-container .react-select__control {
+        font-size: 14px;
+        height: 53px;
+    }
+}
+
+@media only screen and (min-width: $desktop) {
+    h2 {
+        font-size: 24px;
+    }
+
+    .loading {
+        margin-right: 80px;
+        margin-left: 80px;
+    }
+}

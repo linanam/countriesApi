@@ -1,0 +1,176 @@
+@import "./../../styles/utitlities";
+@import "./../../styles/theme";
+
+.details {
+    margin: 0 28px;
+}
+
+.backWrap {
+    margin: 38px 0 64px;
+}
+
+.button {
+    @include centeredBlock;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    user-select: none;
+}
+
+.backButton {
+    & {
+        min-height: 34px;
+        padding-left: 27px;
+        width: 104px;
+    }
+
+    &::before {
+        content: "←";
+        transform: translate(0, -50%);
+        position: absolute;
+        top: 50%;
+        left: 27px;
+    }
+}
+
+.flag {
+    display: block;
+    height: 230px;
+    min-width: $mobile;
+    object-fit: cover;
+    width: 100%;
+}
+
+.line {
+    & {
+        font-weight: 600;
+        margin: 0 0 12px;
+    }
+
+    label {
+        font-weight: 800;
+        margin-right: 5px;
+        text-transform: capitalize;
+    }
+
+    &.tld {
+        margin-top: 43px;
+    }
+}
+
+.borders {
+    & {
+        margin-top: 38px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+}
+
+.borderList {
+    & {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px 10px;
+        margin-top: 17px;
+
+    }
+
+    .button {
+        font-size: 13px;
+        min-height: 28px;
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (min-width: $tablet) {
+    .details {
+        margin: 0 40px;
+    }
+}
+
+@media only screen and (min-width: $smallDesktop) {
+    .flag {
+        height: auto;
+        max-height: 400px;
+        margin: auto;
+        width: 560px;
+    }
+}
+
+@media only screen and (min-width: $middleDesktop) {
+    .details {
+        margin: 50px 60px;
+    }
+
+    .countryInfoWrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .countryInfo {
+        flex-basis: calc(47% + 120px);
+        padding-left: 120px;
+    }
+
+    .flag {
+        margin: 0;
+    }
+
+    .backButton {
+        min-height: 42px;
+        width: 136px;
+    }
+}
+
+@media only screen and (min-width: $desktop) {
+    .details {
+        margin: 78px 80px;
+    }
+
+    .backWrap {
+        margin-bottom: 80px;
+    }
+
+    .lineList {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 52px;
+    }
+
+    .line {
+        & {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        &.tld {
+            margin-top: 0;
+        }
+    }
+
+    .borders {
+        & {
+            margin-top: 65px;
+        }
+
+        &::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        label {
+            float: left;
+            margin: 0 10px 16px 0;
+        }
+    }
+
+    .borderList {
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 0;
+    }
+}

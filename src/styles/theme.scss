@@ -1,0 +1,22 @@
+/* colors */
+$color-black: #000;
+$color-white: #fff;
+$dark-text: $color-white;
+$dark-elements: hsl(209, 23%, 22%);
+$dark-background: hsl(207, 26%, 17%);
+$dark-input: #2b3743;
+$dark-placeholder: $color-white;
+
+$light-text: #111517;
+$light-elements: $color-white;
+$light-input: #858585;
+$light-background: #fafafa;
+$light-placeholder: #d0d0d0;
+$light-icons: $color-black;
+
+$mobile: 375px;
+$tablet: 468px;
+$smallDesktop: 768px;
+$middleDesktop: 1024px;
+$desktop: 1440px;
+

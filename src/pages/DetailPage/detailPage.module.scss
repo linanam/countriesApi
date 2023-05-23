@@ -1,0 +1,29 @@
+@import "./../../styles/theme";
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.item {
+    min-height: 100px;
+}
+
+.detailsContent {
+    & {
+        font-size: 14px;
+        padding-bottom: 60px;
+    }
+
+    h3 {
+        font-size: 23px;
+        margin: 42px 0 19px;
+    }
+}
+
+@media only screen and (min-width: $tablet) {
+    .detailsContent h3 {
+        font-size: 30px;
+        margin: 40px 0 26px;
+    }
+}

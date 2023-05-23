@@ -1,0 +1,44 @@
+@import "./../../styles/theme";
+
+$searchIconSize: 15px;
+
+.search {
+    margin: 22px 16px;
+    position: relative;
+}
+
+.searchIcon {
+    height: $searchIconSize;
+    margin-top: calc((#{$searchIconSize}/2) * -1);
+    mask: url(./images/magnify.svg) no-repeat center / contain;
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    width: $searchIconSize;
+}
+
+.input {
+    & {
+        padding: 5px 10px 5px 73px;
+        width: 100%;
+    }
+
+    &:focus {
+        outline: 0;
+        border-color: cornflowerblue;
+    }
+}
+
+@media only screen and (min-width: $tablet) {
+    .search {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (min-width: $smallDesktop) {
+    .search {
+        flex-basis: 480px;
+        margin: 0 0 48px;
+    }
+}

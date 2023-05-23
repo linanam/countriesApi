@@ -1,0 +1,1 @@
+import {DetailPage} from "./DetailPage";

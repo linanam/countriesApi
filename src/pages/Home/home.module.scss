@@ -1,0 +1,103 @@
+@import "./../../styles/theme";
+
+.list {
+    padding: 0 55px 0 56px;
+}
+
+.item {
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 40px;
+    overflow: hidden;
+    padding-bottom: 40px;
+}
+
+.flag {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+h3 {
+    margin: 26px 25px 14px;
+}
+
+.line {
+    & {
+        font-weight: 600;
+        margin: 0 25px 3px;
+    }
+
+    label {
+        font-weight: 800;
+        margin-right: 5px;
+        text-transform: capitalize;
+    }
+}
+
+@media only screen and (min-width: $tablet) {
+    .panel {
+        padding: 0 40px;
+    }
+
+    .list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        padding: 0 40px;
+    }
+
+    .flag {
+        height: 190px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    h3 {
+        margin: 25px 23px 14px;
+        font-size: 16px;
+    }
+
+    .line {
+        margin-left: 23px;
+        margin-right: 23px;
+    }
+
+    .item {
+        margin-bottom: 4px;
+    }
+}
+
+@media only screen and (min-width: $smallDesktop) {
+    .panel {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 60px;
+    }
+
+    .list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 52px;
+        padding: 0 60px;
+    }
+
+    .flag {
+        height: 220px;
+    }
+}
+
+@media only screen and (min-width: $desktop) {
+    .panel {
+        padding: 0 80px;
+    }
+
+    .list {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 72px;
+        padding: 0 80px;
+    }
+
+    .flag {
+        height: 160px;
+    }
+}
