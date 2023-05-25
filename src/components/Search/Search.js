@@ -6,8 +6,8 @@ export const Search = (props) => {
     if (loading) return;
     return (
         <div className={styles.search}>
-            <span className={`${styles.searchIcon} searchIcon`}></span>
-            <input className={styles.input} value={query} onChange={onSearch} type="text" placeholder="Search for a country" />
+            <label htmlFor="search"><span className={`${styles.searchIcon} searchIcon`}></span></label>
+            <input className={styles.input} name="search" id="search" value={query} onChange={onSearch} type="text" placeholder="Search for a country" />
         </div>
     )
 }

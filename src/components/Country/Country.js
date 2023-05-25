@@ -38,7 +38,7 @@ export const Country = (props) => {
                 <Link to="/" className={`${styles.button} ${styles.backButton} button`}>Back</Link>
             </div>
             <div className={styles.countryInfoWrap}>
-                {item.flags.svg && <img className={styles.flag} src={item.flags.svg} />}
+                {item.flags.svg && <img className={styles.flag} alt={item.name.common} src={item.flags.svg} />}
                 <div className={styles.countryInfo}>
                     <h3>{item.name.common}</h3>
                     <div className={styles.lineList}>

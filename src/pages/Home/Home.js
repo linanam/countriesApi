@@ -81,7 +81,7 @@ export const Home = () => {
                     (countries && countries.length > 0) && countries.map((item) => {
                         return (
                             <Link key={item.cca2} className={styles.item} to={item.cca2.toLowerCase()}>
-                                {item.flags.svg && <img className={styles.flag} src={item.flags.svg} />}
+                                {item.flags.svg && <img className={styles.flag} alt={item.name.common} src={item.flags.svg} />}
                                 <h3>{item.name.common}</h3>
                                 {
                                     lineList.map((line, i) => {
